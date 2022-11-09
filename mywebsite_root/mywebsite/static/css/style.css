@@ -1,0 +1,456 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:active,
+:focus,
+a:active,
+a:focus {
+  outline: 0;
+}
+
+aside,
+footer,
+header,
+nav {
+  display: block;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Neutra;
+  src: url(../fonts/Neutraface2Display-Medium.otf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: NeutraBold;
+  src: url(../fonts/Neutraface2Display-Bold.otf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: MuriadBold;
+  src: url(../fonts/MyriadPro-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .wrapper .main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.main .wrapper .main-block h1 {
+  font: 100px NeutraBold;
+  text-align: center;
+}
+
+.main .wrapper .main-block .main-btn {
+  background: rgba(0,0,0,0);
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 30px;
+  outline: 0;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+  z-index: 1;
+}
+
+.main .wrapper .main-block .main-btn div {
+  transition: transform .6s;
+  color: #000;
+}
+
+.main .wrapper .main-block .main-btn i {
+  color: #000;
+  opacity: 0;
+  font-size: 23px;
+  transition: .2s;
+  position: absolute;
+  right: 0;
+  top: 24px;
+}
+
+.main .wrapper .main-block .main-btn:hover div {
+  transform: translateX(-6px);
+}
+
+.main .wrapper .main-block .main-btn:hover i {
+  opacity: 1;
+  transform: translateX(-6px);
+}
+
+.main .wrapper .main-block .main-btn::after {
+  background: #fab700;
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+  transition: .4s;
+  opacity: .6;
+}
+
+.main .wrapper .main-block .main-btn:hover::after {
+  top: 0;
+  left: 0;
+  opacity: .9;
+}
+
+.main .wrapper .container form .errorlist {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.main {
+  background: #b6b4b4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Neutra;
+  z-index: -2;
+}
+
+.main .wrapper {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.main .wrapper .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.main .wrapper .container .title h2 {
+  font: 100px NeutraBold;
+  margin: 0;
+  color: #000;
+}
+
+.main .wrapper .container form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-bottom: 20px;
+}
+
+.main .wrapper .container form .form-field {
+  font: 16px Rubik,sans-serif;
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: 0;
+  margin-top: 20px;
+}
+
+.main .wrapper .container form .form-field:focus {
+  border-color: #fab700;
+}
+
+.main .wrapper .container form .form-btn {
+  font: 200 30px NeutraBold;
+  background: rgba(0,0,0,0);
+  letter-spacing: 1px;
+  padding: 13px 30px;
+  outline: 0;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+  z-index: 1;
+}
+
+.main .wrapper .container form .form-btn::after {
+  background: #fab700;
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: .2s;
+  opacity: .6;
+}
+
+.main .wrapper .container form .form-btn:hover::after {
+  top: 0;
+  left: 0;
+  opacity: .9;
+}
+
+.main .wrapper .container span {
+  font-size: 20px;
+}
+
+.main .wrapper .container span a {
+  text-decoration: none;
+  color: #9c6704;
+}
+
+body {
+  background: #b6b4b4;
+  font-family: NeutraBold;
+}
+
+body .header {
+  background: #000;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  border-bottom: 3px ridge #fab700;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+body .header nav {
+  padding: 7px 20px;
+}
+
+body .header nav .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body .header nav .user .person {
+  display: flex;
+  align-items: center;
+}
+
+body .header nav .user .person .user-img {
+  width: 30px;
+  fill: #fff;
+}
+
+body .header nav .user .exit-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body .header nav .guest {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+body .header nav .guest .auth-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body .tasks-section {
+  padding: 20px 0;
+}
+
+body .tasks-section .wrapper {
+  max-width: 97%;
+  margin: 0 auto;
+}
+
+body .tasks-section .wrapper .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2%;
+}
+
+body .tasks-section .wrapper .container .tasks {
+  background: #fab700;
+  flex: 2;
+  font-size: 50px;
+  padding: 20px;
+  border: 3px ridge #212121;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-header .task_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-header .task_name .task_input {
+  font-family: 'MuriadBold';
+  background: #fab700;
+  pointer-events: none;
+  font-size: 26px;
+  text-decoration: underline;
+  margin: 10px 0;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-header .task_name span {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-header .task_info {
+  font-size: 30px;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0;
+}
+
+body .tasks-section .wrapper .container .tasks form .tasks-footer button {
+  font: 20px MuriadBold;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+body .tasks-section .wrapper .container .form {
+  background: #212121;
+  flex: 1;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  border: 3px ridge #fab700;
+}
+
+body .tasks-section .wrapper .container .form h4 {
+  color: #fff;
+  font-size: 40px;
+}
+
+body .tasks-section .wrapper .container .form form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+body .tasks-section .wrapper .container .form form .input {
+  margin: 20px 0;
+  position: relative;
+}
+
+body .tasks-section .wrapper .container .form form .input__label {
+  color: #fab700;
+  font-size: 18px;
+  padding: 0 3px;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  background: #212121;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+body .tasks-section .wrapper .container .form form .input__field {
+  color: #fff;
+  font-size: 20px;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid #fff;
+  background: 0 0;
+  resize: none;
+}
+
+body .tasks-section .wrapper .container .form form .input__field:focus {
+  border: 4px double #fff;
+}
+
+body .tasks-section .wrapper .container .form form button {
+  font: 26px MuriadBold;
+  padding: 7px 0;
+  background: #fab700;
+  color: #fff;
+  border-radius: 7px;
+}
+@supports (-webkit-appearance:none){
+
+}

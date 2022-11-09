@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <title>Tasks</title>
+</head>
+<body>
+
+{% block register_page %}
+{% endblock %}
+
+{% block index_page %}
+{% endblock %}
+
+{% block login_page %}
+{% endblock %}
+
+{% block main_page %}
+{% endblock %}
+
+<script src="{% static 'js\script.js' %}"></script>
+</body>
+</html>

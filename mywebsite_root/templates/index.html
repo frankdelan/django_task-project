@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block index_page %}
+<main class="main">
+    <div class="wrapper">
+        <div class="main-block">
+            <h1>Welcome to the website for everyday tasks!</h1>
+            <a href="{% url 'registerapp:register_page' %}" class="main-btn">
+                <div>Let's write something!</div>
+                <i class="icon-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
