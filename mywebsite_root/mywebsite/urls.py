@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from registerapp import views as register_views
-from tasks import views as task_views
+from user_app import views as register_views
+from task_app import views as task_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', register_views.welcome_user, name='index_page'),
-    path('users/', include('registerapp.urls', namespace='users')),
+    path('users/', include('user_app.urls', namespace='users')),
     path('tasks/', task_views.show_page, name='main_page')
 ]

@@ -11,13 +11,13 @@
                 </a>
             </div>
             <div class="exit-btn">
-                <a href="{% url 'registerapp:logout'%}">Log out</a>
+                <a href="{% url 'user_app:logout'%}">Log out</a>
             </div>
         </section>
         {% else %}
         <section class="guest" >
             <div class="auth-btn">
-                <a href="{% url 'registerapp:login_page'%}">Log in</a>
+                <a href="{% url 'user_app:login_page'%}">Log in</a>
             </div>
         </section>
         {% endif %}
@@ -63,7 +63,7 @@
                     </label>
 
                     <label class="input">
-                        <textarea rows="10" class="input__field" type="text" name="task_info" ></textarea>
+                        <textarea rows="10" class="input__field" name="task_info" ></textarea>
                         <span class="input__label">Some information about task</span>
                     </label>
                     <button type="submit">Create</button>

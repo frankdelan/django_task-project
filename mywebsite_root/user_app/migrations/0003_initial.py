@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('registerapp', '0002_delete_user'),
+        ('user_app', '0002_delete_user'),
     ]
 
     operations = [
