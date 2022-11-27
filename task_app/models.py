@@ -12,5 +12,5 @@ class Task(models.Model):
         verbose_name='user'
     )
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.task_user} - {self.task_name}'
