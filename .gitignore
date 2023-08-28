@@ -1,7 +1,7 @@
-venv
-db.sqlite3
-__pycache__
-local_settings.py
-media
-.idea
-db_config.py
+#venv
+#db.sqlite3
+#__pycache__
+#local_settings.py
+#media
+#.idea
+#db_config.py

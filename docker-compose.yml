@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres
+    container_name: todo_postgres
+    environment:
+      POSTGRES_USER: frank
+      POSTGRES_PASSWORD: 7045
+      POSTGRES_DB: ToDo_App
+      POSTGRES_HOST: db
+    ports:
+      - '5432:5432'
